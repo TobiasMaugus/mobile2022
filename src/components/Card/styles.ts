@@ -20,6 +20,10 @@ const styles = StyleSheet.create({
     margin: 5,
     borderRadius: 5,
     padding: 5,
+  },
+  img:{
+    width: 100,
+    height: 100
   }
 })
 
