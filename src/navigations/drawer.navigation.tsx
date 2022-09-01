@@ -3,8 +3,9 @@ import { Text, StyleSheet } from "react-native"
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import {Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import { ChatScreen, MapScreen, PerfilScreen, SairScreen, CameraScreen, ArquivoScreen } from "../screens";
+import { ChatScreen, MapScreen, PerfilScreen, SairScreen, CameraScreen, ArquivoScreen, QrCodeScreen } from "../screens";
 import DrawerNavigation from "./drawer.navigation";
+import ChatNavigation from "./chat.navigation";
 
 const Drawer = createDrawerNavigator();
 
@@ -89,6 +90,33 @@ export default function HomeRoute() {
                             size={24}
                             color={colors.primary}
                         />
+                    ),
+                }}
+            />  
+
+            <Drawer.Screen
+                name="QrCode"
+                component={QrCodeScreen}
+                options={{
+                    drawerLabel: "Qrcode",
+                    drawerIcon: () => (
+                        <MaterialCommunityIcons
+                            name="qrcode-scan"
+                            size={24}
+                            color={colors.primary}
+                        />
+                    ),
+                }}
+            />  
+
+            <Drawer.Screen
+                name="ChatNavigation"
+                component={ChatNavigation}
+                options={{
+                    drawerLabel: "Chat",
+                    title: "Chat",
+                    drawerIcon: () => (
+                        <Ionicons name="chatbubbles" size={24} color={colors.primary}/>
                     ),
                 }}
             />  
