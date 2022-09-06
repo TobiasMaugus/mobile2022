@@ -38,7 +38,7 @@ const [mensagem, setMensagem] = useState <IMensagemState[]>([]);
         <LoadingComp />
         ) : (
         <ImageBackground source={require("../../assets/fundo.png")} style={styles.container}>
-            <SafeAreaView styles={styles.container}>
+            <SafeAreaView style={styles.container}>
                 <View style={styles.rowSearch}>
                     <FontAwesome5 name="search" style={styles.icon} />
                     <TextInput placeholder="Pesquisar chat" />
