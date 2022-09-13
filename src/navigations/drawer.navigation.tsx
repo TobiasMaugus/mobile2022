@@ -3,7 +3,7 @@ import { Text, StyleSheet } from "react-native"
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import {Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import { ChatScreen, MapScreen, PerfilScreen, SairScreen, CameraScreen, ArquivoScreen, QrCodeScreen } from "../screens";
+import { ChatScreen, MapScreen, PerfilScreen, SairScreen, CameraScreen, ArquivoScreen, QrCodeScreen, VideoAudioScreen } from "../screens";
 import DrawerNavigation from "./drawer.navigation";
 import ChatNavigation from "./chat.navigation";
 
@@ -117,6 +117,21 @@ export default function HomeRoute() {
                     title: "Chat",
                     drawerIcon: () => (
                         <Ionicons name="chatbubbles" size={24} color={colors.primary}/>
+                    ),
+                }}
+            />  
+
+            <Drawer.Screen
+                name="AudioVideo"
+                component={VideoAudioScreen}
+                options={{
+                    drawerLabel: "Áudio Vídeo",
+                    drawerIcon: () => (
+                        <MaterialCommunityIcons
+                            name="video"
+                            size={24}
+                            color={colors.primary}
+                        />
                     ),
                 }}
             />  
