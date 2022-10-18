@@ -3,7 +3,7 @@ import { Text, StyleSheet } from "react-native"
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import {Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../styles/colors";
-import { ChatScreen, MapScreen, PerfilScreen, SairScreen, CameraScreen, ArquivoScreen, QrCodeScreen, VideoAudioScreen } from "../screens";
+import { ChatScreen, AcelerometroScreen, MapScreen, PerfilScreen, SairScreen, CameraScreen, ArquivoScreen, QrCodeScreen, VideoAudioScreen } from "../screens";
 import DrawerNavigation from "./drawer.navigation";
 import ChatNavigation from "./chat.navigation";
 
@@ -99,7 +99,7 @@ export default function HomeRoute() {
                 component={QrCodeScreen}
                 options={{
                     drawerLabel: "Qrcode",
-                    drawerIcon: () => (
+                    drawerIcon: () => (                            
                         <MaterialCommunityIcons
                             name="qrcode-scan"
                             size={24}
@@ -135,6 +135,20 @@ export default function HomeRoute() {
                     ),
                 }}
             />  
+            <Drawer.Screen
+                name="Acelerometro"
+                component={AcelerometroScreen}
+                options= {{
+                    drawerLabel: "Acelerômetro",
+                    drawerIcon: () => (
+                        <MaterialCommunityIcons
+                            name="car"
+                            size={24}
+                            color={colors.white}
+                        />
+        ),
+    }}
+/>
         </Drawer.Navigator>
     );
 }
